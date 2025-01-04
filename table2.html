@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script>
+    function ganrater() {
+      let tableNumber = document.getElementById("tableNumber").value;
+      let times =document.getElementById("times").value;
+
+
+      for (i = 1; i <= times; i++) {
+        
+        document.getElementById("display").innerHTML +=
+        tableNumber + " x " + i + "=" + tableNumber * i + "<br>";
+      }
+    }
+  </script>
+  <head>
+    <style>
+    body{
+      background-color: blueviolet;
+    }
+      .dp {
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        margin-top: 100px;
+        gap:10px;
+        
+      }
+     .bit1{
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+     }
+     #display{
+
+      display: flex;
+      justify-content: left;
+      flex-direction: row;
+      margin-top: -20%;
+      color:white;
+      font-weight: 100;
+      font-size: 25px;
+     }
+     button{
+      padding: 10px;
+     }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+          <h1 style="text-align: center;color:aquamarine">Table2 maltiple Time</h1>
+      <div class="dp">
+        
+        <input type="number" id="tableNumber" style="padding: 10px;"  placeholder="Table"/><br><br>
+         
+        <input type="number" id="times"  placeholder="times"/>
+        </div>
+        <!-- <button onclick="ganrater()">enter</button> -->
+         <div class="bit1">
+        
+        <button onclick="ganrater()">Submit</button>
+        
+        </div>
+
+        <div id="display"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    body{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+	}
+	   .container{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+        background-color: rgb(39, 32, 97);
+		border: 2px solid red;
+		width: 600px;
+	     padding: 180px 20px;
+	   }
+       .btn{
+          padding: 5px 40px ;
+		  margin-top: 10%;
+		  background-color: orange;
+		  		
+	   }	   
+	   input{
+		padding: 10px;
+	   }
+	   span{
+
+		margin-top: 3%;
+	   }
+	   .spn{
+		width:30%;
+	   padding: 2%;
+		border:2px solid black;
+		background-color: white;
+	   }
+       </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>subtraction</title>
+</head>
+<body>
+    <h1 class="h1">subtraction function javascript</h1>
+
+    <div class="container">
+        <div style="display: flex; gap: 10px;">
+            <input class="in" type="number" id="num1" /><div style="color:white;font-size:30px ;">-</div>
+            <input type="number"  id="num2"/>
+            <span style="color:white;font: 1em sans-serif;">=</span>
+        </div>
+        <p class="spn" id="display"></p>
+        <button class="btn" onclick="myfun()">Sum</button>
+ </div>
+ 
+</body>
+       <script>
+        	function myfun(){
+	  let input1 =parseInt(document.getElementById("num1").value );
+	  let input2 =parseInt(document.getElementById("num2").value );
+	  let sum=input1-input2;
+	  
+
+	  
+	  document.getElementById("display").innerHTML = sum;
+
+		}
+       </script>
+</html>

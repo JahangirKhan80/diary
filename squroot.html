@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function sqr(){
+            let value  = document.getElementById("get").value;
+            document.getElementById("dsply").innerHTML=Math.sqrt(value);    
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="dsply">0</span>
+    <input type="number" id="get" >
+    <button onclick="sqr()">Enter</button>
+</body>
+</html>

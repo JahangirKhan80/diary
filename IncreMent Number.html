@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: lightslategray;
+        overflow: hidden;
+      }
+      span {
+        background-color: white;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      button {
+        padding: 9.9px;
+        margin: 9px;
+      }
+      div {
+        background-color: white;
+        padding: 10px;
+      }
+    </style>
+    <title>Number increMent</title>
+
+    <script>
+      let num = 0;
+      function count() {
+        num = num + 1;
+        document.getElementById("dsp").innerHTML = num;
+      }
+    </script>
+  </head>
+  <body>
+    <span id="dsp">0</span>
+    <div>&plus;</div>
+    <button onclick="count()">enter</button>
+  </body>
+</html>

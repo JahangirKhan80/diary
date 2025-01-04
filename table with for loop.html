@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            *{
+                margin:0px;
+                padding: 0px;
+            }
+            body{
+              width: 100%;
+              height: 100vh;
+              background-color: rgb(88, 100, 55);
+            }
+       .container{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            margin-top: 100px;
+        }
+        .sub-container{
+            display: flex;
+            justify-content: right ;
+            color: white;
+        } 
+       .h1{
+        text-align: center;
+        color:rgb(242, 158, 158);
+       }
+    </style>
+</head>
+    <script>
+            function  table(){
+                for(let i =1;i <= 30;i++){
+     let val=  document.getElementById("a").value;
+       document.getElementById("d.play").innerHTML+=(i + " x " + val + "="+ i*val + "<br>");
+   }
+
+            }
+
+    </script>
+<body>
+    <h1 class="h1">Javascript (table) useing loop concept</h1>
+    <div class="container">
+       <input type="text" id="a" />
+       <button onclick=" table()">Enter</button>
+</div>
+      <div class="sub-container">
+       <p id="d.play"></p>
+       </div>
+</body>
+</html>

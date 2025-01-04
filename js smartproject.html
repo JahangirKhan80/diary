@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.result{
+position:relative;
+top: 100px;
+}
+input{
+
+      position: relative;
+	  left:400px;
+	  padding: 10px;
+}
+button{
+position: relative;
+top: 100px;
+left: 170px;
+}
+</style>
+</head>
+<body>
+     <input type="number" id="num1" />  
+	 <input type="number"  id="num2"/>
+	                                
+	 
+	 <span class="result" id="display">bold</span>
+
+	 
+	 <button onclick="myfun()">Sum</button>
+</body>
+       <script>
+	   
+	   
+	   function  myfun(){
+	   let num1 = document.getElementById("num1").value;
+	   console.log('num1');
+	   let num2 = document.getElementById("num2").value;
+	   console.log('num1');
+       let Sum = ducument.getElementById("display").value;
+	    
+	   if(sum==='+'){
+	   let num1 = document.getElementById("num1").value;
+	   let num2 = document.getElementById("num2").value;
+	   document.getElementById("display").value = num1+num2;
+	   
+	   
+	   }
+	   
+	   }
+	   myfun();
+	   </script>
+
+</html>
