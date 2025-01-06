@@ -1,112 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="calculator.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="calculator.css" />
     <script>
-	
-let num1 = 0;
-let num2 = 0;
-let opr = 0;
+      let num1 = 0;
+      let num2 = 0;
+      let opr = 0;
 
+      function pick(number) {
+        // Show number in input field
+        document.getElementById("a").value += number;
+        if (
+          number === "+" ||
+          number === "-" ||
+          number === "/" ||
+          number === "*"
+        ) {
+          num1 = document.getElementById("a").value;
+          opr = number;
 
+          document.getElementById("a").value = null;
+        }
+        if (number === "=") {
+          num2 = document.getElementById("a").value;
 
-	
-    function pick(number){
-		// Show number in input field
-    document.getElementById("a").value += number;
-    if(number==='+' || number==='-'|| number==='/'||number==='*'){
-      
-                num1 = document.getElementById("a").value;
-                opr=number;
-
-                document.getElementById("a").value=null;
-
-               } 
-    if(number==='='){
-      
-      num2 = document.getElementById("a").value;
-
-      if(opr=='+')
-    {
-        let result= parseInt(num1) + parseInt(num2);
-        document.getElementById("a").value = result;
-
-    }else if(opr=='-'){
-            let result=parseInt(num1) - parseInt(num2);
+          if (opr == "+") {
+            let result = parseInt(num1) + parseInt(num2);
             document.getElementById("a").value = result;
-    }else if(opr=='/'){
-            let result=parseInt(num1) / parseInt(num2);
+          } else if (opr == "-") {
+            let result = parseInt(num1) - parseInt(num2);
             document.getElementById("a").value = result;
-    }else if(opr==='*'){
-            let result=parseInt(num1) * parseInt(num2);
+          } else if (opr == "/") {
+            let result = parseInt(num1) / parseInt(num2);
             document.getElementById("a").value = result;
-
-    }
-
-     } 
-     if(number=='C'){
-                    document.getElementById("a").value= null;
-      
-     }
-
-    
-   
-    }
-
-        
-
-    
-
-
-   
-
-
-  
-  
-
-		
-		
+          } else if (opr === "*") {
+            let result = parseInt(num1) * parseInt(num2);
+            document.getElementById("a").value = result;
+          }
+        }
+        if (number == "C") {
+          document.getElementById("a").value = null;
+        }
+      }
     </script>
-  
-    </head>
-    <title></title>
-<body>
-    <div class="containor"> 
-        <input id="a" type="text" class="calculator-screen" disabled/>
-         <div class="calculator-key">
-          <div class="num-key">
-            <button id="1" type="button" class="button" value="1"onclick="pick('1')">1</button>
-            <button id="2"  type="button" class="button" value="2" onclick="pick('2')">2</button>
-            <button id="3" type="button" class="button" value="3" onclick="pick('3')">3</button>
-            <button id="4"  type="button" class="button" value="4" onclick="pick('4')">4</button>
-            <button id="5" type="button" class="button" value="5" onclick="pick('5')" >5</button>
-            <button id="6" type="button" class="button" value="6" onclick="pick('6')">6</button>
-            <button id="7" type="button" class="button" value="7" onclick="pick('7')">7</button>
-            <button id="8" type="button" class="button" value="8p" onclick="pick('8')">8</button>
-            <button id="9" type="button" class="button" value="9" onclick="pick('9')">9</button>
-            <button id="0" type="button" class="button" value="0"onclick="pick('0')">0</button>
-             
-            <button id="AC" type="button" class="operator" value="AC" onclick="pick('AC')">AC</button>
-             <button id="CE" type="button" class="operator" value="C" onclick="pick('C')">C</button> 
-            </div>
-                 
-              <div  class="operation-keys">
-             <button   type="button" class="operator" value="/" onclick="pick('/')">/</button>
-              <button type="button" class="operator" value="*" onclick="pick('*')">*</button>
-         
-             <button id="opr" type="button" class="operator" value="+" onclick="pick('+')">+</button>
-         
-             <button type="button" class="operator" value="-" onclick="pick('-')">-</button>
-            <button  type="button" class="operator" value="%"onclick="pick('%')">%</button>
-            <button  type="button" class="operator" value="." onclick="pick('.')">.</button>
-            <button  type="button" class="operator" value="=" onclick="pick('=')">=</button>
-            
+  </head>
+  <title></title>
+  <body>
+    <div class="containor">
+      <input id="a" type="text" class="calculator-screen" disabled />
+      <div class="calculator-key">
+        <div class="num-key">
+          <button
+            id="1"
+            type="button"
+            class="button"
+            value="1"
+            onclick="pick('1')"
+          >
+            1
+          </button>
+          <button
+            id="2"
+            type="button"
+            class="button"
+            value="2"
+            onclick="pick('2')"
+          >
+            2
+          </button>
+          <button
+            id="3"
+            type="button"
+            class="button"
+            value="3"
+            onclick="pick('3')"
+          >
+            3
+          </button>
+          <button
+            id="4"
+            type="button"
+            class="button"
+            value="4"
+            onclick="pick('4')"
+          >
+            4
+          </button>
+          <button
+            id="5"
+            type="button"
+            class="button"
+            value="5"
+            onclick="pick('5')"
+          >
+            5
+          </button>
+          <button
+            id="6"
+            type="button"
+            class="button"
+            value="6"
+            onclick="pick('6')"
+          >
+            6
+          </button>
+          <button
+            id="7"
+            type="button"
+            class="button"
+            value="7"
+            onclick="pick('7')"
+          >
+            7
+          </button>
+          <button
+            id="8"
+            type="button"
+            class="button"
+            value="8p"
+            onclick="pick('8')"
+          >
+            8
+          </button>
+          <button
+            id="9"
+            type="button"
+            class="button"
+            value="9"
+            onclick="pick('9')"
+          >
+            9
+          </button>
+          <button
+            id="0"
+            type="button"
+            class="button"
+            value="0"
+            onclick="pick('0')"
+          >
+            0
+          </button>
+
+          <button
+            id="AC"
+            type="button"
+            class="operator"
+            value="AC"
+            onclick="pick('AC')"
+          >
+            AC
+          </button>
+          <button
+            id="CE"
+            type="button"
+            class="operator"
+            value="C"
+            onclick="pick('C')"
+          >
+            C
+          </button>
         </div>
-      </div>   
-    </div>   
-    
-    
-</body>
+
+        <div class="operation-keys">
+          <button type="button" class="operator" value="/" onclick="pick('/')">
+            /
+          </button>
+          <button type="button" class="operator" value="*" onclick="pick('*')">
+            *
+          </button>
+
+          <button
+            id="opr"
+            type="button"
+            class="operator"
+            value="+"
+            onclick="pick('+')"
+          >
+            +
+          </button>
+
+          <button type="button" class="operator" value="-" onclick="pick('-')">
+            -
+          </button>
+          <button type="button" class="operator" value="%" onclick="pick('%')">
+            %
+          </button>
+          <button type="button" class="operator" value="." onclick="pick('.')">
+            .
+          </button>
+          <button type="button" class="operator" value="=" onclick="pick('=')">
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
