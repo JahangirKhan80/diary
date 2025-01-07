@@ -18,15 +18,15 @@
     </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Evon odd Number</title>
+    <title>Even odd Number</title>
   </head>
   <body>
     <h1 style="text-align: center; color: rgb(107, 10, 23)">
       Even Odd Numbers
     </h1>
     <div class="container">
-      <input type="text" id="number" />
-
+      <input type="number" id="number" />
+      <input type="number" id="rangeNumber" />
       <p id="display"></p>
 
       <button onclick="Even()">Enter</button>
@@ -34,14 +34,18 @@
 
     <script>
       function Even() {
-        let val = document.getElementById("number").value;
-
-        for (let val = 0; val <= 100; val++)
-          if (val % 2 == 0) {
-            console.log("evenNumber" + val);
-          } else if (val % 2 != 0) {
-            console.log("oddnumber" + val);
+        document.getElementById("display").innerHTML = null;
+        let num1 = document.getElementById("number").value;
+        let range = document.getElementById("rangeNumber").value;
+        for (let val = parseInt(num1); val <= parseInt(range); val++) {
+          if (parseInt(val) % 2 == 0) {
+            document.getElementById("display").innerHTML +=
+              val + " Even Number<br>";
+          } else {
+            document.getElementById("display").innerHTML +=
+              val + " Odd Number<br>";
           }
+        }
       }
     </script>
   </body>
