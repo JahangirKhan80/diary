@@ -31,23 +31,18 @@
 
       <button onclick="Even()">Enter</button>
     </div>
-    <p>hello</p>
+
     <script>
       function Even() {
         let val = document.getElementById("number").value;
-        let evenNumber = [];
-        let oddNumber = [];
-        for (let i = 0; i < val.length; i++)
-          if (val[i] % 2 == 0) {
-            evenNumber.push(val[i]);
-          } else if (val[i] % 2 != 0) {
-            oddNumber.push(val[i]);
+
+        for (let val = 0; val <= 100; val++)
+          if (val % 2 == 0) {
+            console.log("evenNumber" + val);
+          } else if (val % 2 != 0) {
+            console.log("oddnumber" + val);
           }
-        console.log("evenNumber" + evenNumber);
-        console.log("oddnumber" + oddNumber);
       }
     </script>
   </body>
 </html>
-document.getElementById("display").innerHTML = evenNumber.push(val[i]);
-document.getElementById("display").innerHTML = oddNumber.push(val[i]);
