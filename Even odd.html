@@ -15,6 +15,9 @@
         justify-content: center;
         flex-direction: column;
       }
+      p {
+        margin-right: 400px;
+      }
     </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,12 +30,22 @@
     <div class="container">
       <input type="number" id="number" />
       <input type="number" id="rangeNumber" />
-      <p id="display"></p>
+      <p id="display">p</p>
 
       <button onclick="Even()">Enter</button>
+      <button onclick="getvalue()">getvalue</button>
     </div>
 
     <script>
+      let Evenarr = [];
+      let oddarr = [];
+      function getvalue() {
+        document.getElementById("display").innerHTML = null;
+        for (let i = 0; i < Evenarr.length; i++)
+          document.getElementById("display").innerHTML += Evenarr[i] + "<br>";
+        for (let i = 0; i < oddarr.length; i++)
+          document.getElementById("display").innerHTML += oddarr[i] + "<br>";
+      }
       function Even() {
         document.getElementById("display").innerHTML = null;
         let num1 = document.getElementById("number").value;
@@ -41,9 +54,11 @@
           if (parseInt(val) % 2 == 0) {
             document.getElementById("display").innerHTML +=
               val + " Even Number<br>";
+            Evenarr.push(val + " Even Number");
           } else {
             document.getElementById("display").innerHTML +=
               val + " Odd Number<br>";
+            oddarr.push(val + "odd Number");
           }
         }
       }
